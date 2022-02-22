@@ -24,7 +24,6 @@ public class Catalog {
     private String name;
 
     @OneToMany(mappedBy = "catalog")
-    @JsonIgnore
     private List<Product> products;
 
     @CreationTimestamp

@@ -5,8 +5,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.List;
-
 @Controller
 public class ProductController {
 
@@ -17,7 +15,7 @@ public class ProductController {
     }
 
     @GetMapping("/api/products")
-    public ResponseEntity<List<Product>> getProducts(){
-        return new ResponseEntity<>(productService.getProducts(), HttpStatus.OK);
+    public ResponseEntity getProducts(){
+        return new ResponseEntity(productService.getProducts(), HttpStatus.OK);
     }
 }

@@ -9,7 +9,6 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.time.Instant;
-import java.util.List;
 
 @Entity
 @Data
@@ -22,9 +21,6 @@ public class Catalog {
     private Long id;
 
     private String name;
-
-    @OneToMany(mappedBy = "catalog")
-    private List<Product> products;
 
     @CreationTimestamp
     private Instant createdAt;
